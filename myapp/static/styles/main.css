@@ -1,0 +1,67 @@
+body{
+    background-color: #202020;
+    color: whitesmoke
+}
+
+.navbar {
+    background-color: #404040;
+    padding: 5px 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: aquamarine;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.card {
+    background: whitesmoke;
+    color: black;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.input {
+    background: wheat;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-radius: .3rem;
+    border: none;
+}
+
+.boton-save{
+    padding: 5px 20px;
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    border-radius: .3rem;
+}
+.boton-save:hover{
+    cursor: pointer;
+    background-color: blue;
+    transition: .3s ease-in;
+}

@@ -1,0 +1,43 @@
+{% extends 'layouts/base.html' %}
+
+{% block content%}
+<h1 
+style="
+    background-color: brown;
+    text-align: center;
+    border-radius: 1rem;
+    color:white;
+    ">Tasks</h1>
+{# note: esta es una tarea  este comentario no se ve en htyml#}
+<!--Este si se ve-->
+{% for task in tasks %}    
+<h2>{% if task.done == False %}🕑{% else %}✓{% endif %} {{task.title}}</h1>
+
+{% if task.done == False %}
+    <p>Task pendiente</p>
+{% else %}
+    <p>Task realizada</p>
+{% endif %}
+
+<h3>{{task.description}}</h2>
+<h4>{{task.project}}</h3>
+<button 
+    style="
+        padding: 8px 20px;
+        background-color: brown;
+        color:white;
+        border-radius: 4px;
+        border: none;
+        ">🗑 Delete</button>
+
+<button 
+    style="
+        padding: 8px 20px;
+        background-color:darkgreen;
+        color:white;
+        border-radius: 4px;
+        border: none;
+        ">✓ Done</button>
+<hr>
+{% endfor %}
+{% endblock %}
